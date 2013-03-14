@@ -1,0 +1,6 @@
+# Convergence results
+# fictional 2008
+level dof error1 error2 info grad(log(dof),log(error2)) quot(error1)
+1 4 2.500e-01 7.578e-01 48 0 0
+2 16 6.250e-02 5.000e-01 25 -3.000e-01 4
+3 64 1.562e-02 2.871e-01 41 -3.999e-01 4
