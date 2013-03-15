@@ -51,7 +51,7 @@
 \usepackage{url}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Listings style.
+% Listings style. Can be customised to relevant language.
 \usepackage{listings}
 \lstset{language=[Objective]C,
     keywordstyle=\color{Magenta},%\bfseries,
@@ -121,36 +121,92 @@ some more text \ldots}
 % Headings in tufte-latex are restricted to \section and \subsection.
 % \label allows cross-referencing. See lshort.pdf for details.
 
-% pgfplot example.
-\section{First section---an example pgfplot}
-\begin{tikzpicture}
-\begin{axis}
-\addplot3[surf,domain=0:360,samples=40]{sin(x)*sin(y)};
-\end{axis}
-\end{tikzpicture}
+% Vertical space.
+\vspace{1cm}
 
-% pgfplotstable example. Note that data table is in folder.
-\section{Second section---an example of pgfplotstable}
-\pgfplotstabletypeset[
-columns={dof,error1,info},
-column type/.add={|}{} % results in '|c'
-]{pgfplotstable.example1.dat}
+This document shows some of there capabilities of the \emph{tufts-latex} class and acts as a template for my documents.\cite{pkg-geometry}
 
-\newpage
+\section{Formatting}
 
-% New thought.
-\newthought{Here is the way} that a new thought is expressed in the \emph{tufte-latex} class.\marginnote{Here is an example of the \texttt{marginnote} command (without superscript number) and which allows text styling.}
+\subsection{Lists}
+
+% Enumerated list.
+Here is an \emph{enumerated} list:
+
+\begin{enumerate}
+\item compare common files in the two projects (\textcolor{green}{green})
+\item add minimal working code to new files in \texttt{OpenGLStage2\_KM} (\textcolor{red}{red}).
+\end{enumerate}
+
+% Code listing.
+\subsection{Code Listing}
+
+Here is some sample code from \emph{OpenGLStage\_KM}:
+
+\begin{lstlisting}
+/* Localized versions of Info.plist keys */
+
+CFBundleName = "OpenGLStage_KM";
+NSHumanReadableCopyright = "© __MyCompanyName__, 2007";
+\end{lstlisting} \marginnote{\texttt{English.lproj > InfoPList.strings}}
+
+% Quotations.
+\subsection{Quotations}
+
+Here is Apple's definition of an \emph{Xcode} project as an example of a \texttt{quotation}:
+
+\begin{quotation}
+An Xcode project is a repository for all the files, resources, and information required to build one or more software products. A project contains all the elements used to build your products and maintains the relationships between those elements. It contains one or more targets, which specify how to build products. A project defines default build settings for all the targets in the project (each target can also specify its own build settings, which override the project build settings).
+\end{quotation}
 
 \section{Figures and Tables}
+
+This lecture is divided into the following sections (shows the use of multiple references).\cite{Kuehni2005,SimonsBean2001,GuoHouser2004}
+
+% New thought.
+\newthought{Here is the way} that a new thought is expressed in the \emph{tufte-latex} class.
+
+\subsection{Full page width figure (TikZ)}
+% Here is a full page width figure executed in TikZ.
+\begin{figure*}
+ %\parindent=0pt
+ %\parskip=10pt
+ \begin{center}
+ \begin{tikzpicture}[thin,fill opacity=0.5]
+   \filldraw[fill=green!70]   (180:4cm)    circle (0.5cm);
+   
+
+  \filldraw[fill=red!50]   (0:0)    circle (0.5cm);
+  \filldraw[fill=green!70] (300:0.7cm)  circle (0.5cm);
+   \filldraw[fill=blue!20]   (240:0.7cm)    circle (0.5cm);
+   
+   \filldraw[fill=green!70]   (216.870:5cm)    circle (0.5cm);
+      \filldraw[fill=blue!20]   (222.769:5.449cm)    circle (0.5cm);
+      
+        \filldraw[fill=red!50]   (270:3cm)    circle (0.5cm);
+  \filldraw[fill=green!70] (270:3.7cm)  circle (0.5cm);
+    \draw (90:1) [opacity=1.0]node {MATCH};
+       \draw (165.964:4.123) [opacity=1.0]node {TEST};
+              \draw (180:2) [opacity=1.0]node {no match possible};
+                    \draw (236.310:3.606) [opacity=1.0]node {match};
+  \caption{Extension of the definition of mixing. `Negative' mixing in that adding blue to the spot on the left is equivalent to adding \emph{`negative'} blue on the right}
+   \label{fig:mixing}
+\end{tikzpicture}
+
+ \end{center}
+\end{figure*}
 
 % Table-full page width.
 \subsection{Full page width table}
 
-Here is an example. Note also the use of the \texttt{textcolor} command both in the main text and in \texttt{marginnote}. Captions and references to the Table (\texttt{label})
- are also shown.
+Here is an example. Note also the use of the \texttt{textcolor} command both in the main text and in the \texttt{marginnote}. Captions and references to the Table (\texttt{label})
+ are also shown.\marginnote{Here is an example of the \texttt{marginnote} command (\textbf{without} superscript number) and which allows text styling.}
  
  % Note use of \ref to reference Table in text. Tilde is produced from $\sim$.
  The new project is created in \emph{XCode4} from \texttt{File > New > Project\ldots} and is named \texttt{OpenGLStage2\_KM}. A comparison of the file structure of the two projects is shown in Table~\ref{tab:file-listing-subset} (\textcolor{green}{green} = common; \textcolor{red}{red} = unique).\marginnote{\textcolor{red}{Q}. Significance of \texttt{MainMenu$\sim$.nib} files?}
+ 
+ % Margin todo note.
+\todo{\emph{Next} \ldots a margin todo note.}
  
  % Full page width table is {table*}. phv=Helvetica. Strike out is \sout (ulem package).
  % Note \caption and \label commands.
@@ -184,556 +240,26 @@ Here is an example. Note also the use of the \texttt{textcolor} command both in 
   \\
   \caption{File listing subset \texttt{OpenGLStage\_KM} and \texttt{OpenGLStage2\_KM}}
   \label{tab:file-listing-subset}
-  %\zsavepos{pos:normaltab}
 \end{table*}
 
+\lipsum[1]
 
-\vspace{1cm}
-
-
-\todo [inline] {\emph{Next} \ldots continue from here}
-
-\subsection{First subsection}
-\subsection{Second subsection}
-\subsection{Third subsection}
-
-\subsection{First subsection}
-\subsection{Second subsection}
-\subsection{Third subsection}
-
-
-
-\section{Replicating \emph{OpenGLStage\_KM}}
-
-\subsection{File structure comparison}
-
-The new project is created in \emph{XCode4} from \texttt{File > New > Project\ldots} and is named \texttt{OpenGLStage2\_KM}. A comparison of the file structure of the two projects is shown in Table~\ref{tab:file-listing-subset} (\textcolor{green}{green} = common; \textcolor{red}{red} = unique). It should be noted that the \emph{root} folder for \emph{OpenGLStage\_KM} is \texttt{OpenGLStage\_KM}; that for \emph{OpenGLStage2\_KM} is correspondingly \texttt{OpenGLStage2\_KM} but the \emph{XCode4} template encapsulates the program files in another folder---\texttt{OpenGLStage2\_KM}. It is not clear whether this is significant or not.
-
-The two files \texttt{AppDelegate.h} and \texttt{AppDelegate.m} are \emph{global} in nature (dealing with the \emph{UI}) and it is recommended to use them sparingly or not at all. For the purposes of this exercise they are \textbf{removed}.\marginnote{Delete within \emph{XCode4}.} One minor question is the significance of \texttt{MainMenu$\sim$.nib} in {OpenGLStage2\_KM}.
-
-On \texttt{Building} and \texttt{Running} \emph{OpenGLStage2\_KM}, the product is an app with a menu and an empty window in \emph{Xcode4} but otherwise incomplete.
-
-
-
-\newthought{The process to compare} the two projects:
-\begin{enumerate}
-\item compare common files in the two projects (\textcolor{green}{green})
-\item add minimal working code to new files in \texttt{OpenGLStage2\_KM} (\textcolor{red}{red}).
-\end{enumerate}
-
-\section{Common and files in \texttt{OpenGLStage\_KM} and \texttt{OpenGLStage2\_KM}}
-
-\subsection{\texttt{InfoPlist.strings} and \texttt{InfoPlist.strings}}
-
-\emph{OpenGLStage\_KM} was built under a legacy version of \emph{Xcode}---while that of \emph{OpenGLStage2\_KM} is built under \emph{XCode4}. Notice that the enclosing folder in \emph{OpenGLStage\_KM} here is \texttt{English.lproj} compared to \texttt{en.lproj} in \emph{OpenGLStage2\_KM}.
-
-These files (which are strings files \textbf{not} property lists) provide a mechanism for \emph{localizing} user-visible strings in an application's meta-file---which is contained in its \texttt{Info.plist} file.
-
-Here is the existing code in \emph{OpenGLStage\_KM} and \emph{OpenGLStage2\_KM} respectively which is left unchanged:
-
-\begin{lstlisting}
-/* Localized versions of Info.plist keys */
-
-CFBundleName = "OpenGLStage_KM";
-NSHumanReadableCopyright = "© __MyCompanyName__, 2007";
-\end{lstlisting} \marginnote{\texttt{English.lproj > InfoPList.strings}}
-
-\vspace{0.5cm}
-
-\begin{lstlisting}
-/* Localized versions of Info.plist keys */
-\end{lstlisting}\marginnote{\texttt{OpenGLStage2\_KM > en.lproj > InfoPList.strings}}
-
-\subsection{\texttt{MainMenu.nib} and \texttt{MainMenu.xib}}
-
-The \texttt{.NIB} file is a resource file that stores the visual part of the application (windows, views \emph{etc}) and is also used to configure \emph{nonvisual} objects (such as controller objects). The \texttt{.NIB} file is an \emph{InterfaceBuilder} document which creates an object graph.\marginnote{object graph: a group of objects forming a network through their relationships with each other either through direct reference to an object or through a chain of intermediate references.} This is archived when you save the file and when the file is loaded the object graph is unarchived \emph{viz}. at runtime. The \texttt{.NIB} file in \emph{OpenGLStage\_KM} is the original interface implementation in \emph{InterfaceBuilder}. It seems to be a \emph{compiled} version and cannot be opened in \emph{XCode4}.
-
-It seems that \emph{InterfaceBuilder} is now accessed \textbf{directly} in \emph{XCode4} to provide an improved graphical editor. The new format is the \texttt{.XIB} file (a plain text \texttt{XML} file).\marginnote{Use only \emph{XCode4} to edit these files directly.} The customisation of this new interface can be left to a later stage.
-
-\subsection{\texttt{Info.plist} and \texttt{OpenGLStage2\_KM-Info.plist}}
-These files are the applications` \emph{information property list} file (\texttt{Info.plist})(Figures~\ref{fig:info-plist1} and \ref{fig:info-plist2}).
-
-\begin{figure}
- %\parindent=0pt
- %\parskip=10pt
- %\begin{center}
-\includegraphics{info-plist1.pdf}
-  \caption{\texttt{Info.plist}}
-   \label{fig:info-plist1}
-% \end{center}
-\end{figure}
-
-\begin{figure*}
- %\parindent=0pt
- %\parskip=10pt
- %\begin{center}
-\includegraphics{info-plist2.pdf}
-  \caption{\texttt{OpenGLStage2\_KM > OpenGLStage2\_KM-Info.plist}}
-   \label{fig:info-plist2}
-% \end{center}
-\end{figure*}
-
-A property list is ``a structured data representation used by \emph{Cocoa} and \emph{Core Foundation} as a convenient way to store, organize, and access standard types of data. It is colloquially referred to as a ``plist'' ''.
-Here is Apple's description of a property list:
-\begin {quotation}
-A property list is a representation of a hierarchy of objects that can be stored in the file system and reconstituted later. Property lists give applications a lightweight and portable way to store small amounts of data. They are hierarchies of data made from specific types of objects---they are, in effect, an object graph. Property lists are easy to create programmatically and are even easier to serialize into a representation that is persistent. Applications can later read the static representation back into memory and recreate the original hierarchy of objects. 
-\end{quotation}.\marginnote[-2cm]{Apple's notes about the storage and editing of property lists: ``The preferred way to store property lists on Mac OS X and iOS is as an \texttt{XML} file\ldots these files have the advantages of being human-readable and in the standards-based \texttt{XML} format. Generally, there is little need to create or edit \texttt{XML} property lists yourself, but if you do, use \emph{Xcode's} built-in property list editor or the \emph{Property List Editor} application (which is part of the tools package). You should not edit the XML data in a text editor unless you are very familiar with XML syntax and the format of property lists.}
-
-\subsection{\texttt{main.m} and \texttt{main.m}}
-
-These files are automatically populated by \emph{XCode4} when the project is created (including the commented section):\marginnote{These files do not need to be edited.}
-
-\begin{lstlisting}
-//
-//  main.m
-//  OpenGLStage_KM
-//
-//  Created by Kevin Mansfield on 14/07/2007.
-//  Copyright KPM 2007. All rights reserved.
-//
-
-#import <Cocoa/Cocoa.h>
-
-int main(int argc, char *argv[])
-{
-    return NSApplicationMain(argc,  (const char **) argv);
-}
-\end{lstlisting} \marginnote{\texttt{main.m}}
-
-\vspace{0.5cm}
-
-\begin{lstlisting}
-//
-//  main.m
-//  OpenGLStage2_KM
-//
-//  Created by Kevin Mansfield on 15/06/2012.
-//  Copyright (c) 2012 UCL Bartlett School of Graduate Studies. All rights reserved.
-//
-
-#import <Cocoa/Cocoa.h>
-
-int main(int argc, char *argv[])
-{
-    return NSApplicationMain(argc, (const char **)argv);
-}
-\end{lstlisting} \marginnote{\texttt{OpenGLStage2\_KM > main.m}}
-
-The job of \texttt{main.m} consists of two steps:
-
-\begin{enumerate}
-\item{to set up a core group of objects}
-\item{to turn program control over to those objects.}
-\end{enumerate}
-
-The \emph{main} function is extremely simple and consists of only one call to \texttt{NSApplicationMain}. This function
-
-\begin{quote} %{quotation}
-creates the application object, sets up an autorelease pool, loads the initial user interface from the main nib file, and runs the application, thereby requesting it to begin handling events received on the main event loop.
-\end{quote}
-
-To use Frameworks in the project, the framework is added to the project through the Linked Frameworks and Library pane (in \emph{XCode4}) and the top-level header file is included in the source file. The use of the \texttt{\#import} directive ensures that the same header file is never included more than once. Syntax is\\
-\texttt{\#import $<$Framework\_name/Header\_filename.h$>$}\\
- \emph{e.g.} \texttt{\#import $<$Cocoa/Cocoa.h$>$}\\
-\marginnote{Standard locations for Frameworks are \texttt{/System/Library/Frameworks} or \texttt{/Users/kpm/Library/Frameworks}.}
-
-
-viz. here is the folder listing in the two projects\ldots
-
-
-OpenGLStage\_KM\\
-
-Frameworks > Linked Frameworks > Cocoa.framework\\
-Frameworks > Linked Frameworks > OpenGL.framework\\
-Frameworks > Other Frameworks > Foundation.framework\\
-Frameworks > Other Frameworks > AppKit.framework\\
-
-OpenGLStage2\_KM\\
-
-Frameworks > Cocoa.framework\\
-Frameworks > Other Frameworks > AppKit.framework\\
-Frameworks > Other Frameworks > CoreData.framework\\
-Frameworks > Other Frameworks > Foundation.framework\\
-
-Linked Frameworks and Libraries\\
-Cocoa.framework\\
-
-
-\subsection{\texttt{OpenGLStage2\_Prefix.h} and \texttt{OpenGLStage2\_KM-Prefix.pch}}
-
-A prefix file is a \emph{header} file that is generated automatically by many \emph{Xcode} project templates---they can include ``umbrella frameworks appropriate to the selected type of application''.
-
-Here are the Prefix files generated in each of the projects:
-
-\begin{lstlisting}
-//
-// Prefix header for all source files of the 'OpenGLStage2' 
-// target in the 'OpenGLStage2' project
-//
-
-#ifdef __OBJC__
-    #import <Cocoa/Cocoa.h>
-#endif
-\end{lstlisting} \marginnote{\texttt{OpenGLStage2\_Prefix.h}}
-
-\vspace{0.5cm}
-
-\begin{lstlisting}
-//
-// Prefix header for all source files of the 'OpenGLStage2_KM' target in the 'OpenGLStage2_KM' project
-//
-
-#ifdef __OBJC__
-    #import <Cocoa/Cocoa.h>
-#endif
-\end{lstlisting} \marginnote{\texttt{OpenGLStage2\_KM > OpenGLStage2\_KM-Prefix.pch}}
-
-They are identical and are therefore left unchanged.
-
-\subsection{\texttt{OpenGLStage2.pbproj} and \texttt{OpenGLStage2\_KM.xcodeproj}}
-
-Here is Apple's definition of an \emph{Xcode} project:
-
-\begin{quotation}
-An Xcode project is a repository for all the files, resources, and information required to build one or more software products. A project contains all the elements used to build your products and maintains the relationships between those elements. It contains one or more targets, which specify how to build products. A project defines default build settings for all the targets in the project (each target can also specify its own build settings, which override the project build settings).
-\end{quotation}
-
-\texttt{OpenGLStage2.pbproj} is a legacy \emph{ProjectBuilder} project and cannot be opened in \emph{XCode4}.
-
-\subsection{\texttt{Credits.rtf}}
-
-A generated file in \emph{XCode4} which is self-explanatory.
-\begin{lstlisting}
-Engineering:
-	Some people
-
-Human Interface Design:
-	Some other people
-
-Testing:
-	Hopefully not nobody
-
-Documentation:
-	Whoever
-
-With special thanks to:
-	Mom
-\end{lstlisting} \marginnote{\texttt{OpenGLStage2\_KM > en.lproj > Credits.rtf}}
-
-
-
-\section{The \textsc{MVC} paradigm}
-
-The program is roughly structured using the \emph{Model-View-Controller} paradigm. According to the design notes, there is no \emph{Model} as such. The \emph{View} part (\emph{GLView} class) ``handles \textsc{3D} rendering with the \emph{Controller} class negotiating between the stepper controls and the rendering engine''.\marginnote{See \texttt{Help > Page03.html}.}
-\emph{OpenGLStage\_KM} provides a skeleton example of an \emph{OpenGL} program. Use this as a reference to develop the basic functionality of \emph{OpenGLStage2\_KM}.
-A first step is to add \textbf{partial} versions of \texttt{GLView.h} and \texttt{GLView.m} from \emph{OpenGLStage\_KM} to \emph{OpenGLStage2\_KM}.
-
-\subsection{\texttt{GLView.h}}
-
-To create a file in a project, go to \texttt{Utilities > Show File Template Library} and drag the appropriate file type into the project (this ensures correct linking \emph{etc}). Here is the original code from \emph{OpenGLStage\_KM} placed in \emph{OpenGLStage2\_KM}:
-
-\begin{lstlisting}
-/* GLView */
-
-#import <Cocoa/Cocoa.h>
-
-@interface GLView : NSOpenGLView
-{
-}
-@end
-\end{lstlisting} \marginnote{\texttt{GLView.h}}
-
-\vspace{0.5cm}
-
-\begin{lstlisting}
-//
-//  GLView.h
-//  OpenGLStage2_KM
-//
-//  Created by Kevin Mansfield on 14/06/2012.
-//  Copyright (c) 2012 UCL Bartlett School of Graduate Studies. All rights reserved.
-//
-
-#import <Cocoa/Cocoa.h>
-
-@interface GLView : NSOpenGLView
-{ 
-}
-@end
-\end{lstlisting} \marginnote{\texttt{OpenGLStage2\_KM > GLView.h}}
-
-\subsection{\texttt{GLView.m}}
-
-Similarly, here is \textbf{partial} code from \emph{OpenGLStage\_KM} placed into \emph{OpenGLStage2\_KM} (extra code commented out):
-
-\begin{lstlisting}
-//#include compiler directive. Syntax: #include <Framework/Header.h>
-#include <OpenGL/gl.h>
-
-#import "GLView.h"
-#import "DrawingFunctions.h"
-
-@implementation GLView
-
-//Overriding the view's drawRect method to draw OpenGL content.
-//Syntax: - (void) drawRect: (NSRect) aRect
--(void) drawRect: (NSRect) rect
-
-{
-	
-	//Specifies red, green, blue and alpha values used
-	//(clamped to a range [0, 1]) when color buffers are cleared.
-	//Syntax: void glClearColor (GLclampf red, GLclampf green, 
-	//GLclampf blue, GLclampf alpha).
-	glClearColor(0.2,0.2,1.0,0.1);
-	
-	//Sets the bitplane area of the window to value previously
-	//selected by glClearColor. The argument indicates which
-	//buffer(s) are to be cleared viz. the buffer enabled for
-	//color writing.
-	//Syntax: void glClear (GLbitfield mask)
-	glClear(GL_COLOR_BUFFER_BIT);
-	
-	//Function defined in DrawingFunctions.h called from main()
-	//with appropriate value passed to function.
-	//Syntax: FunctionName (parameter_value);
-	DrawBoundingBox (0.3);
-	
-	//Different GL implementations 'buffer' commands in several
-	//different locations (inc. the graphics accelerator itself).
-	//glFlush empties all buffers as quickly as the rendering
-	//engine allows. Call glFlush when depending on the completion
-	//of previously issued commands eg. user input depending upon a
-	//generated image.
-	//Syntax: void glFlush(void).
-	glFlush();
-	
-}
-@end
-\end{lstlisting} \marginnote{\texttt{GLView.m}}
-
-\vspace{0.5cm}
-
-\begin{lstlisting}
-//#include compiler directive. Syntax: #include <Framework/Header.h>
-#include <OpenGL/gl.h>
-
-#import "GLView.h"
-//#import "DrawingFunctions.h"
-
-@implementation GLView
-
-//Overriding the view's drawRect method to draw OpenGL content.
-//Syntax: - (void) drawRect: (NSRect) aRect
--(void) drawRect: (NSRect) rect
-
-{
-	
-	//Specifies red, green, blue and alpha values used
-	//(clamped to a range [0, 1]) when color buffers are cleared.
-	//Syntax: void glClearColor (GLclampf red, GLclampf green, 
-	//GLclampf blue, GLclampf alpha).
-	glClearColor(0.2,0.2,1.0,0.1);
-	
-	//Sets the bitplane area of the window to value previously
-	//selected by glClearColor. The argument indicates which
-	//buffer(s) are to be cleared viz. the buffer enabled for
-	//color writing.
-	//Syntax: void glClear (GLbitfield mask)
-	glClear(GL_COLOR_BUFFER_BIT);
-	
-	//Function defined in DrawingFunctions.h called from main()
-	//with appropriate value passed to function.
-	//Syntax: FunctionName (parameter_value);
-	//DrawBoundingBox (0.3);
-	
-	//Different GL implementations 'buffer' commands in several
-	//different locations (inc. the graphics accelerator itself).
-	//glFlush empties all buffers as quickly as the rendering
-	//engine allows. Call glFlush when depending on the completion
-	//of previously issued commands eg. user input depending upon a
-	//generated image.
-	//Syntax: void glFlush(void).
-	glFlush();
-	
-}
-@end
-\end{lstlisting} \marginnote{\texttt{OpenGLStage2\_KM > GLView.m}}
-
-\subsection{\texttt{Controller.h}}
-
-Here is the original code from \emph{OpenGLStage\_KM} followed by that placed in \emph{OpenGLStage2\_KM}:
-
-\begin{lstlisting}
-/* Controller */
-
-/* #import automatically includes a 
-header file only once. Suspect that
-<---> represents a 'system' file and
-"---" represents a 'user' file.
-Q. Why include Cocoa/Cocoa.h and
-GLView.h here? */
-#import <Cocoa/Cocoa.h> 
-#import "GLView.h"
-
-/* @interface introduces the essential
-declarations of the interface. Declaration 
-is ended by @end.
-Syntax: @interface ClassName : Superclass */
-@interface Controller : NSObject
-{
-	/* IBOutlet references an 
-	 Interface Builder object in
-	 an application. Best to statically
-	 type it as a pointer to an object.
-	 Syntax: IBOutlet Object *myObject; */
-	IBOutlet GLView	*glView;
-}
-
-/* An IBAction is a specific method when
- a control is triggered. An action method
- takes a single parameter of type (id) and 
- returns the type IBAction.
- Syntax: -(IBAction)actionMethod:(id)sender; */
--(IBAction)launchHelp:(id)sender;
-
-@end
-\end{lstlisting} \marginnote{\texttt{Controller.h}}
-
-\vspace{0.5cm}
-
-\begin{lstlisting}
-/* Controller */
-
-/* #import automatically includes a 
-header file only once. Suspect that
-<---> represents a 'system' file and
-"---" represents a 'user' file.
-Q. Why include Cocoa/Cocoa.h and
-GLView.h here? */
-#import <Cocoa/Cocoa.h> 
-#import "GLView.h"
-
-/* @interface introduces the essential
-declarations of the interface. Declaration 
-is ended by @end.
-Syntax: @interface ClassName : Superclass */
-@interface Controller : NSObject
-{
-	/* IBOutlet references an 
-	 Interface Builder object in
-	 an application. Best to statically
-	 type it as a pointer to an object.
-	 Syntax: IBOutlet Object *myObject; */
-	IBOutlet GLView	*glView;
-}
-
-/* An IBAction is a specific method when
- a control is triggered. An action method
- takes a single parameter of type (id) and 
- returns the type IBAction.
- Syntax: -(IBAction)actionMethod:(id)sender; */
--(IBAction)launchHelp:(id)sender;
-
-@end
-\end{lstlisting} \marginnote{\texttt{OpenGLStage2\_KM > Controller.h}}
-
-\subsection{\texttt{Controller.m}}
-
-Similarly, is the original code from \emph{OpenGLStage\_KM} followed by that placed in \emph{OpenGLStage2\_KM}:
-
-
-\begin{lstlisting}
-/* Imports the appropriate header file. */
-#import "Controller.h"
-
-/* @implementation declares the definitions of
- the methods. Similar to the interface block it has
- no data section. Declaration 
- is ended by @end.
- Syntax: @implementation ClassName */
-@implementation Controller
-
-//-(void)awakeFromNib
-//{
-
-//}
-
-// TBC.....
--(IBAction)launchHelp:(id)sender
-{
-
-	NSBundle * mainBundle = [NSBundle mainBundle];
-	NSString * filename = [mainBundle pathForResource: @"index" ofType:@"html" inDirectory:@"Help"];
-	if(![[NSWorkspace sharedWorkspace] openFile: filename withApplication:@"Safari"])
-	{
-		if(![[NSWorkspace sharedWorkspace] openFile: filename withApplication: @"Internet Explorer"])
-			NSBeep();
-	}
-
-}
-
-@end
-\end{lstlisting} \marginnote{\texttt{Controller.m}}
-
-\vspace{0.5cm}
-
-\begin{lstlisting}
-/* Imports the appropriate header file. */
-#import "Controller.h"
-
-/* @implementation declares the definitions of
- the methods. Similar to the interface block it has
- no data section. Declaration 
- is ended by @end.
- Syntax: @implementation ClassName */
-@implementation Controller
-
-//-(void)awakeFromNib
-//{
-
-//}
-
-// TBC.....
--(IBAction)launchHelp:(id)sender
-{
-
-	NSBundle * mainBundle = [NSBundle mainBundle];
-	NSString * filename = [mainBundle pathForResource: @"index" ofType:@"html" inDirectory:@"Help"];
-	if(![[NSWorkspace sharedWorkspace] openFile: filename withApplication:@"Safari"])
-	{
-		if(![[NSWorkspace sharedWorkspace] openFile: filename withApplication: @"Internet Explorer"])
-			NSBeep();
-	}
-
-}
-
-@end
-\end{lstlisting} \marginnote{\texttt{OpenGLStage2\_KM > Controller.m}}
-
-%\todo[inline]{\emph{Next} add Controller.h and Controller.m from OpenGLStage\_KM---try to avoid using DrawingFunctions file\ldots}
-
-%\todo[inline]{A very long todonote that certainly will fill more
-%than a single line in the list of todos. Just to make sure let's add
-%some more text \ldots}
-
-% The \smallcaps command has been improved to slightly increase letterspacing in tufte-latex.
-
-% Headings in tufte-latex are restricted to \subsection and \section.
-% \label allows cross-referencing. See lshort.pdf for details.
-\subsection{Introduction}\label{sec:introduction}
-This lecture is divided into the following sections.\cite{Kuehni2005,SimonsBean2001,GuoHouser2004}
-
-For more details see \url{www.ucl.ac.uk/\textasciitilde ucftkpm}
-
+% Missing figure placeholder.
 \missingfigure{A figure I have to make \ldots}
 
-\section{Colour and the Visual Process}\label{sec:colour-visual-process}
+% Clickable url references in Adobe Acrobat Pro.
+% Note use of \textasciitilde.
+For more details see \url{www.ucl.ac.uk/\textasciitilde ucftkpm}
 
-We consider colour vision, adaptation and constancy (see figure~\ref{fig:mixing}) and continue with the colour response of rods and cones (figure~\ref{fig:cone}).\marginnote[-1cm]{This is a margin note.  Notice that there is no number preceding the note, and there is no number in the main text where this note was written.} 
-% Notice the use of the offset in the \marginnote.
+\subsection{Normal figure}
 
-Reference is then made to opponent colour theory (see figure~\ref{fig:model}).
+\lipsum[2]
+
+% Notice \smallcaps command and the use of the offset in the \marginnote.
+We consider colour vision, adaptation and constancy (see figure~\ref{fig:model}) and continue with the colour response of rods and cones (figure~\ref{fig:cone}). The features of the \smallcaps{CIE} system are described including distribution curves, tristimulus values and chromaticity values. \marginnote[-1cm]{This is a margin note.}
+
+
+
 
 % Notice control of text width parameter here.
 \begin{figure}
@@ -743,66 +269,32 @@ Reference is then made to opponent colour theory (see figure~\ref{fig:model}).
 \label{fig:model}
 \end{figure}
 
-\begin{marginfigure}
+\subsection{Margin figure}
+
+The diagram is further developed in the \smallcaps{CIE} uniform chromaticity scale (\smallcaps{UCS}) $uv$ and $u`v`$ diagram.
+
+\lipsum[3]
+
+% Note offset option here.
+\begin{marginfigure} % [-4cm]
 \includegraphics[scale=0.3]{Cone_Absorption_Curves}
 \caption{Cone absorption curves (Sangwine S and Home R. \emph{The Colour Image Processing Handbook}. Springer (1998) p12)}
 \label{fig:cone}
 \end{marginfigure}
 
+\subsection{Full width, normal and margin tables}
 
+Here is the same table shown in a variety of formats.
 
-\section{Colour Measurement and Quantification}\label{sec:colour-measurement-quantification}
-From the studies of Newton we define additive mixing (see figure~\ref{fig:colourwheel}). Grassman derived his additivity law in 1853. We consider red, blue and green mixing and the need for negative values. The introduction of \emph{imaginary} sources allows transition to the \smallcaps{CIE} system. The features of the \smallcaps{CIE} system are described including distribution curves, tristimulus values and chromaticity values. 
+% Produces placeholder body text.
+\lipsum[2]
 
-\begin{marginfigure}
-\includegraphics[scale=0.3]{Colour_Wheel}
-\caption{Colour circle (\url{www.realcolorwheel.com/final.htm})}
-\label{fig:colourwheel}
-\end{marginfigure}
+\newpage
 
-Calculation and measurement within the \smallcaps{CIE} system are described with reference to the \smallcaps{CIE} diagram which is used to describe the colours of light sources and objects lit with a particular light source. The mixture of two colours will lie on the straight line between them. Different parts of the diagram have different subjective differences.
-The diagram is further developed in the \smallcaps{CIE} uniform chromaticity scale (\smallcaps{UCS}) $uv$ and $u`v`$ diagram.
+Table~\ref{tab:CIESystem} shows the \smallcaps{CIE} system. 
 
-% Here is a full-width figure environment executed in TikZ.
-\begin{figure*}
- %\parindent=0pt
- %\parskip=10pt
- \begin{center}
- \begin{tikzpicture}[thin,fill opacity=0.5]
-   \filldraw[fill=green!70]   (180:4cm)    circle (0.5cm);
-   
-
-  \filldraw[fill=red!50]   (0:0)    circle (0.5cm);
-  \filldraw[fill=green!70] (300:0.7cm)  circle (0.5cm);
-   \filldraw[fill=blue!20]   (240:0.7cm)    circle (0.5cm);
-   
-   \filldraw[fill=green!70]   (216.870:5cm)    circle (0.5cm);
-      \filldraw[fill=blue!20]   (222.769:5.449cm)    circle (0.5cm);
-      
-        \filldraw[fill=red!50]   (270:3cm)    circle (0.5cm);
-  \filldraw[fill=green!70] (270:3.7cm)  circle (0.5cm);
-    \draw (90:1) [opacity=1.0]node {MATCH};
-       \draw (165.964:4.123) [opacity=1.0]node {TEST};
-              \draw (180:2) [opacity=1.0]node {no match possible};
-                    \draw (236.310:3.606) [opacity=1.0]node {match};
-  \caption{Extension of the definition of mixing. `Negative' mixing in that adding blue to the spot on the left is equivalent to adding \emph{`negative'} blue on the right}
-   \label{fig:mixing}
-\end{tikzpicture}
-
- \end{center}
-\end{figure*}
-
-\section{Light Source Colour Performance}\label{sec:light-source-colour-performance}
-% Notice the use of the \newthought command in tufte-latex to capitalise the first few words of the paragraph.
-\newthought{We describe the electromagnetic spectrum} and various light source spectral distributions before moving on to their measurement.
-Light source colour description is in terms of \emph{colour appearance} (\smallcaps{CIE} correlated colour temperature (\smallcaps{CCT})) and colour rendering (\smallcaps{CIE} colour rendering index (\smallcaps{CRI}) $R_a$).
-
-\section{Surface Colour Systems}\label{sec:surface-colour-systems}
-\newthought{We consider the Munsell Colour System 1905} (refined 1976) with its components Value, Hue and Chroma and the Natural Colour System (\smallcaps{NCS}).
-
-Table~\ref{tab:CIESystem} shows the \smallcaps{CIE} system. Another version is shown in Table~\ref{tab:CIESystem2} and a final version in Table~\ref{tab:CIESystem3}.
-
-\begin{table*}
+% Full width table.
+\begin{table*} [h]
   \centering
   \fontfamily{ppl}\selectfont
   \begin{tabular}{l}
@@ -824,6 +316,9 @@ $z=\frac{Z}{(X+Y+Z)}$\\
   %\zsavepos{pos:normaltab}
 \end{table*}
 
+Another version is shown in Table~\ref{tab:CIESystem2} and a final version in Table~\ref{tab:CIESystem3}.
+
+% Normal table.
 \begin{table}
   \centering
   \fontfamily{ppl}\selectfont
@@ -846,7 +341,10 @@ $z=\frac{Z}{(X+Y+Z)}$\\
   %\zsavepos{pos:normaltab}
 \end{table}
 
-\begin{margintable}
+\vspace{0.5cm}
+
+% Margin table.
+\begin{margintable} [5cm]
   \centering
   \fontfamily{ppl}\selectfont
   \begin{tabular}{l}
@@ -868,24 +366,14 @@ $z=\frac{Z}{(X+Y+Z)}$\\
   %\zsavepos{pos:normaltab}
 \end{margintable}
 
-%%%%%%%%%%
-% Incorporating knitr in the tufte-latex class.
-% knitr output can be incorporated in the tufte-latex class by commenting out \documentclass, \begin{document} and \end{document} commands in the knitr file and reference to packages \usepackage{...}. The packages should be listed in the preamble of the tufte-latex.tex file. Packages that are required by the knitr class are: graphicx, color, framed, ams math, amsthm, amssymb, fancyhdr, url, float.
-
-% Use the \input command to incorporate the knitr.tex file and ensure that framed.sty is in the file path. Any images called by the knitr file also need to be present in the file path.
-%%%%%%%%%%
-
-%\input knitExampleKM.tex
-
-% Produces placeholder body text.
-\lipsum[1]
+\lipsum[5]
 
 Here is a short section of text where we want multiple references. The best overview of colour is by Kuehni\cite{Kuehni2005}. Simons and Bean\cite{SimonsBean2001} provide useful computational techniques and a full discussion of different colour metrics is given in Guo and Houser.\cite{GuoHouser2004}
 
 \vspace{10cm}
 
 \section{Miscellaneous \texttt{TikZ} Examples}
-Some interesting \texttt{TikZ} examples from a variety of sources. A graph example is shown in figure~\ref{fig:graph}.%\todo{Is it necessary to quote the source here?}
+Some interesting \texttt{TikZ} examples from a variety of sources. A full width graph example is shown in figure~\ref{fig:graph}.%\todo{Is it necessary to quote the source here?}
 
 \begin{figure*}
 \parindent=0pt
@@ -962,294 +450,30 @@ Finally a small margin figure in \texttt{TikZ} (see figure~\ref{fig:economicsgra
 \end{center}
 \end{marginfigure}
 
-\begin{lstlisting}
-//
-//  main.m
-//  OpenGLStage2
-//
-//  Created by James De Spears on Sun Feb 16 2003.
-//  Copyright (c) 2003 __MyCompanyName__. All rights reserved.
-//
+\section{pgfplot}
 
-#import <Cocoa/Cocoa.h>
-
-int main(int argc, const char *argv[])
-{
-    return NSApplicationMain(argc, argv);
-}
-\end{lstlisting} \marginnote{\texttt{main.m}}\begin{lstlisting}
-//
-//  main.m
-//  OpenGLStage2
-//
-//  Created by James De Spears on Sun Feb 16 2003.
-//  Copyright (c) 2003 __MyCompanyName__. All rights reserved.
-//
-
-#import <Cocoa/Cocoa.h>
-
-int main(int argc, const char *argv[])
-{
-    return NSApplicationMain(argc, argv);
-}
-\end{lstlisting} \marginnote{\texttt{main.m}}
-
-
-
-\begin{leftbar}
-Showing some of the capability of the \texttt{framed} environment to denote a passage of text.
-\end{leftbar}
-
-%\todo[inline]{A very long todonote that certainly will fill more
-%than a single line in the list of todos. Just to make sure let's add
-%some more text \ldots}
-
-% The \smallcaps command has been improved to slightly increase letterspacing in tufte-latex.
-
-% Headings in tufte-latex are restricted to \subsection and \section.
-% \label allows cross-referencing. See lshort.pdf for details.
-\subsection{Introduction}\label{sec:introduction}
-This lecture is divided into the following sections.\cite{Kuehni2005,SimonsBean2001,GuoHouser2004}
-
-For more details see \url{www.ucl.ac.uk/\textasciitilde ucftkpm}
-
-\missingfigure{A figure I have to make \ldots}
-
-\section{Colour and the Visual Process}\label{sec:colour-visual-process}
-
-We consider colour vision, adaptation and constancy (see figure~\ref{fig:mixing}) and continue with the colour response of rods and cones (figure~\ref{fig:cone}).\marginnote[-1cm]{This is a margin note.  Notice that there is no number preceding the note, and there is no number in the main text where this note was written.} 
-% Notice the use of the offset in the \marginnote.
-
-Reference is then made to opponent colour theory (see figure~\ref{fig:model}).
-
-% Notice control of text width parameter here.
-\begin{figure}
-\centering
-\includegraphics[width=0.5\textwidth]{opponent}
-\caption{Generic colour appearance model (\url{www.handprint.com/HP/WCL/color2.html})}
-\label{fig:model}
-\end{figure}
-
-\begin{marginfigure}
-\includegraphics[scale=0.3]{Cone_Absorption_Curves}
-\caption{Cone absorption curves (Sangwine S and Home R. \emph{The Colour Image Processing Handbook}. Springer (1998) p12)}
-\label{fig:cone}
-\end{marginfigure}
-
-
-
-\section{Colour Measurement and Quantification}\label{sec:colour-measurement-quantification}
-From the studies of Newton we define additive mixing (see figure~\ref{fig:colourwheel}). Grassman derived his additivity law in 1853. We consider red, blue and green mixing and the need for negative values. The introduction of \emph{imaginary} sources allows transition to the \smallcaps{CIE} system. The features of the \smallcaps{CIE} system are described including distribution curves, tristimulus values and chromaticity values. 
-
-\begin{marginfigure}
-\includegraphics[scale=0.3]{Colour_Wheel}
-\caption{Colour circle (\url{www.realcolorwheel.com/final.htm})}
-\label{fig:colourwheel}
-\end{marginfigure}
-
-Calculation and measurement within the \smallcaps{CIE} system are described with reference to the \smallcaps{CIE} diagram which is used to describe the colours of light sources and objects lit with a particular light source. The mixture of two colours will lie on the straight line between them. Different parts of the diagram have different subjective differences.
-The diagram is further developed in the \smallcaps{CIE} uniform chromaticity scale (\smallcaps{UCS}) $uv$ and $u`v`$ diagram.
-
-% Here is a full-width figure environment executed in TikZ.
-\begin{figure*}
- %\parindent=0pt
- %\parskip=10pt
- \begin{center}
- \begin{tikzpicture}[thin,fill opacity=0.5]
-   \filldraw[fill=green!70]   (180:4cm)    circle (0.5cm);
-   
-
-  \filldraw[fill=red!50]   (0:0)    circle (0.5cm);
-  \filldraw[fill=green!70] (300:0.7cm)  circle (0.5cm);
-   \filldraw[fill=blue!20]   (240:0.7cm)    circle (0.5cm);
-   
-   \filldraw[fill=green!70]   (216.870:5cm)    circle (0.5cm);
-      \filldraw[fill=blue!20]   (222.769:5.449cm)    circle (0.5cm);
-      
-        \filldraw[fill=red!50]   (270:3cm)    circle (0.5cm);
-  \filldraw[fill=green!70] (270:3.7cm)  circle (0.5cm);
-    \draw (90:1) [opacity=1.0]node {MATCH};
-       \draw (165.964:4.123) [opacity=1.0]node {TEST};
-              \draw (180:2) [opacity=1.0]node {no match possible};
-                    \draw (236.310:3.606) [opacity=1.0]node {match};
-  \caption{Extension of the definition of mixing. `Negative' mixing in that adding blue to the spot on the left is equivalent to adding \emph{`negative'} blue on the right}
-   \label{fig:mixing}
+% pgfplot example.
+\subsection{An example pgfplot}
+\begin{tikzpicture}
+\begin{axis}
+\addplot3[surf,domain=0:360,samples=40]{sin(x)*sin(y)};
+\end{axis}
 \end{tikzpicture}
 
- \end{center}
-\end{figure*}
+% pgfplotstable example. Note that data table is in folder.
+\subsection{An example of pgfplotstable}
+\pgfplotstabletypeset[
+columns={dof,error1,info},
+column type/.add={|}{} % results in '|c'
+]{pgfplotstable.example1.dat}
 
-\section{Light Source Colour Performance}\label{sec:light-source-colour-performance}
-% Notice the use of the \newthought command in tufte-latex to capitalise the first few words of the paragraph.
-\newthought{We describe the electromagnetic spectrum} and various light source spectral distributions before moving on to their measurement.
-Light source colour description is in terms of \emph{colour appearance} (\smallcaps{CIE} correlated colour temperature (\smallcaps{CCT})) and colour rendering (\smallcaps{CIE} colour rendering index (\smallcaps{CRI}) $R_a$).
+\newthought{Now to consider} a simple referencing style.\cite{Tufte2006}
 
-\section{Surface Colour Systems}\label{sec:surface-colour-systems}
-\newthought{We consider the Munsell Colour System 1905} (refined 1976) with its components Value, Hue and Chroma and the Natural Colour System (\smallcaps{NCS}).
+\lipsum[2]
 
-Table~\ref{tab:CIESystem} shows the \smallcaps{CIE} system. Another version is shown in Table~\ref{tab:CIESystem2} and a final version in Table~\ref{tab:CIESystem3}.
+\todo{\emph{Next} \ldots still missing \emph{knitr} capabilities.}
 
-\begin{table*}
-  \centering
-  \fontfamily{ppl}\selectfont
-  \begin{tabular}{l}
-    \toprule
-   \\
-    %\midrule
-    $(C)\equiv x(X)+y(Y)+z(Z)$\\
-    where\\
-$x=\frac{X}{(X+Y+Z)}$\\
-$y=\frac{Y}{(X+Y+Z)}$\\
-$z=\frac{Z}{(X+Y+Z)}$\\
-      and hence\\
-            $x+y+z=1$\\
-            \\
-    \bottomrule
-  \end{tabular}
-  \caption{\smallcaps{CIE} system}
-  \label{tab:CIESystem}
-  %\zsavepos{pos:normaltab}
-\end{table*}
-
-\begin{table}
-  \centering
-  \fontfamily{ppl}\selectfont
-  \begin{tabular}{l}
-    \toprule
-   \\
-    %\midrule
-    $(C)\equiv x(X)+y(Y)+z(Z)$\\
-    where\\
-$x=\frac{X}{(X+Y+Z)}$\\
-$y=\frac{Y}{(X+Y+Z)}$\\
-$z=\frac{Z}{(X+Y+Z)}$\\
-      and hence\\
-            $x+y+z=1$\\
-            \\
-    \bottomrule
-  \end{tabular}
-  \caption{\smallcaps{CIE} system}
-  \label{tab:CIESystem2}
-  %\zsavepos{pos:normaltab}
-\end{table}
-
-\begin{margintable}
-  \centering
-  \fontfamily{ppl}\selectfont
-  \begin{tabular}{l}
-    \toprule
-   \\
-    %\midrule
-    $(C)\equiv x(X)+y(Y)+z(Z)$\\
-    where\\
-$x=\frac{X}{(X+Y+Z)}$\\
-$y=\frac{Y}{(X+Y+Z)}$\\
-$z=\frac{Z}{(X+Y+Z)}$\\
-      and hence\\
-            $x+y+z=1$\\
-            \\
-    \bottomrule
-  \end{tabular}
-  \caption{\smallcaps{CIE} system}
-  \label{tab:CIESystem3}
-  %\zsavepos{pos:normaltab}
-\end{margintable}
-
-%%%%%%%%%%
-% Incorporating knitr in the tufte-latex class.
-% knitr output can be incorporated in the tufte-latex class by commenting out \documentclass, \begin{document} and \end{document} commands in the knitr file and reference to packages \usepackage{...}. The packages should be listed in the preamble of the tufte-latex.tex file. Packages that are required by the knitr class are: graphicx, color, framed, ams math, amsthm, amssymb, fancyhdr, url, float.
-
-% Use the \input command to incorporate the knitr.tex file and ensure that framed.sty is in the file path. Any images called by the knitr file also need to be present in the file path.
-%%%%%%%%%%
-
-%\input knitExampleKM.tex
-
-% Produces placeholder body text.
-\lipsum[1]
-
-Here is a short section of text where we want multiple references. The best overview of colour is by Kuehni\cite{Kuehni2005}. Simons and Bean\cite{SimonsBean2001} provide useful computational techniques and a full discussion of different colour metrics is given in Guo and Houser.\cite{GuoHouser2004}
-
-\vspace{10cm}
-
-\section{Miscellaneous \texttt{TikZ} Examples}
-Some interesting \texttt{TikZ} examples from a variety of sources. A graph example is shown in figure~\ref{fig:graph}.%\todo{Is it necessary to quote the source here?}
-
-\begin{figure*}
-\parindent=0pt
-\parskip=0pt
- \begin{center}
-\begin{tikzpicture}[scale=\marginparwidth/2cm]%
-  Draw thin grid lines with color 40% gray + 60% white
-  \draw[step=0.5,thin,gray!40,dashed](-1,-1) grid(1,1);
- \draw(-1,-1) rectangle (1,1);
- \draw[dashed,semithick] (0,1)node[above]
- {L}--(-1,0)node[right]{K}--(0,-1)node[below]{N} ;
- \fill (-0.5,0) circle (1.6pt) node[above]{T} (0,0) circle
-(1.6pt)node
- [above]{O} (0.5,0) circle (1.6pt)node [above]{S};
-  \draw  (0,-1.8) node  {\c{S}ekil I};
- \end{tikzpicture}%
-  \caption{A graph example.}
-  \label{fig:graph}
-\end{center}
-\end{figure*}
-
-\vspace{2cm}
-
-Here is another small \texttt{TikZ} example (see figure~\ref{fig:example}).
-
-\begin{figure}
-% \parindent=0pt
-% \parskip=0pt
- \begin{center}
- \begin{tikzpicture}[scale=\marginparwidth/17in*2.54]%
- % spread border
- \draw (0.0, 0.0) rectangle (17, -11);
- % gutter
- \draw (8.5, 0.0) -- (8.5, -11);
- % body text blocks
- \filldraw[color=gray!30] (1.0, -1.0) rectangle +(4.33333, -8.55555);
- \filldraw[color=gray!30] (9.5, -1.0) rectangle +(4.33333, -8.55555);
- % sidenotes
- \filldraw[color=gray!30] ( 5.66666, -1.0) rectangle
-+(\marginparwidth/2.54, -2.0);
- \filldraw[color=gray!30] (14.16666, -1.0) rectangle
-+(\marginparwidth/2.54, -2.0);
- \end{tikzpicture}%
-
-%\par\footnotesize Asymmetric page layout
-\caption{A small example.}
-  \label{fig:example}
- \end{center}
-
-\end{figure}
-
-%\vspace{2cm}
-
-Finally a small margin figure in \texttt{TikZ} (see figure~\ref{fig:economicsgraph}).
-
-\begin{marginfigure}[5cm]
- %\parindent=0pt
-% \parskip=0pt
- \begin{center}
-\begin{tikzpicture}[scale=\marginparwidth/7cm]
-\path [fill=yellow] (0,0) -- (0,5) to [out=-80, in=160]
-             (3,.8) -- (3,0) -- (0,0);
-\draw [<->]  (0,6) node [left] {$P$}  -- (0,0)
-       node [below left] {(0,0)} -- (7,0) node [below] {$Q$};
-\draw [ultra thick, dashed]  (0,.8) node [left] {$P^*=.8$} -- (3,.8)
-       -- (3,0) node [below] {$Q^*=3$};
-\draw [fill] (3,.8) circle [radius=.1];
-\draw [thick] (0,5) to [out=-80, in=160] (3,.8) to
-             [out=-20, in=175] (6,0);
-\end{tikzpicture}
-%\par\footnotesize A graph
-\caption{An economics graph.}
-\label{fig:economicsgraph} 
-\end{center}
-\end{marginfigure}
-
-Bibliography example(\cite{Tufte2006}).
+Bibliography example. Suggest that this article\cite{Ihaka1996} be consulted.
 
 \newpage
 

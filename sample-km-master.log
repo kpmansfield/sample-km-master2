@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2013.2.5)  14 MAR 2013 08:52
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2013.2.5)  15 MAR 2013 08:48
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1118,53 +1118,7 @@ Package: preview 2010/02/14 11.86 (AUCTeX/preview-latex)
 (/usr/local/texlive/2012/texmf-dist/tex/latex/preview/prtightpage.def
 \PreviewBorder=\dimen227
 ))
-(./sample-km-master.aux
-
-LaTeX Warning: Label `sec:introduction' multiply defined.
-
-
-LaTeX Warning: Label `sec:colour-visual-process' multiply defined.
-
-
-LaTeX Warning: Label `fig:model' multiply defined.
-
-
-LaTeX Warning: Label `fig:cone' multiply defined.
-
-
-LaTeX Warning: Label `sec:colour-measurement-quantification' multiply defined.
-
-
-LaTeX Warning: Label `fig:colourwheel' multiply defined.
-
-
-LaTeX Warning: Label `fig:mixing' multiply defined.
-
-
-LaTeX Warning: Label `sec:light-source-colour-performance' multiply defined.
-
-
-LaTeX Warning: Label `sec:surface-colour-systems' multiply defined.
-
-
-LaTeX Warning: Label `tab:CIESystem' multiply defined.
-
-
-LaTeX Warning: Label `tab:CIESystem2' multiply defined.
-
-
-LaTeX Warning: Label `tab:CIESystem3' multiply defined.
-
-
-LaTeX Warning: Label `fig:graph' multiply defined.
-
-
-LaTeX Warning: Label `fig:example' multiply defined.
-
-
-LaTeX Warning: Label `fig:economicsgraph' multiply defined.
-
-)
+(./sample-km-master.aux)
 \openout1 = `sample-km-master.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 89.
@@ -1185,7 +1139,8 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 89.
 LaTeX Font Info:    ... okay on input line 89.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 89.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 89.
- (/usr/local/texlive/2012/texmf-dist/tex/latex/base/ts1cmr.fd
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 89.
@@ -1343,6 +1298,12 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 2.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 7.19995pt on input line 2.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--4
+ [][] [][][][][][][] \T1/phv/m/sl/8 Next \T1/phv/m/n/8 ...still miss-ing \T1/ph
+v/m/sl/8 knitr \T1/phv/m/n/8 ca-pa-bil-i- 
+ []
+
 )
 \tf@tdo=\write6
 \openout6 = `sample-km-master.tdo'.
@@ -1364,18 +1325,32 @@ LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
 (Font)              scaled to size 8.50006pt on input line 111.
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
 ine 118.
-PGFPlots: reading {pgfplotstable.example1.dat}
- [1
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 4.49997pt on input line 127.
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 6.80005pt on input line 127.
+
+
+LaTeX Warning: Marginpar on page 1 moved.
+
+
+LaTeX Warning: Marginpar on page 1 moved.
+
+[1
 
 {/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 6.80005pt on input line 142.
 
+LaTeX Warning: Marginpar on page 2 moved.
+
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <8> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 203.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 7.19995pt on input line 203.
 
 LaTeX Warning: Marginpar on page 2 moved.
 
 
-Overfull \hbox (16.12721pt too wide) in paragraph at lines 153--154
+Overfull \hbox (16.12721pt too wide) in paragraph at lines 206--207
 []\T1/pplj/m/n/10 The new project is cre-ated in \T1/pplj/m/it/10 XCode4 \T1/pp
 lj/m/n/10 from \T1/fvm/m/n/10 File > New > Project... 
  []
@@ -1383,247 +1358,82 @@ lj/m/n/10 from \T1/fvm/m/n/10 File > New > Project...
 
 LaTeX Warning: Marginpar on page 2 moved.
 
+
+LaTeX Warning: Marginpar on page 2 moved.
+
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 162.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 218.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 8.99994pt on input line 162.
+(Font)              scaled to size 8.99994pt on input line 218.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 164.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 220.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.99994pt on input line 164.
+(Font)              scaled to size 8.99994pt on input line 220.
 
-Overfull \hbox (4.12721pt too wide) in paragraph at lines 210--211
-\T1/pplj/m/n/10 The new project is cre-ated in \T1/pplj/m/it/10 XCode4 \T1/pplj
-/m/n/10 from \T1/fvm/m/n/10 File > New > Project... 
- []
-
-[2]
-LaTeX Font Info:    Font shape `T1/pplj/bx/n' in size <10> not available
-(Font)              Font shape `T1/pplj/b/n' tried instead on input line 212.
-
-
-LaTeX Warning: Marginpar on page 3 moved.
-
-LaTeX Font Info:    Font shape `T1/fvm/m/it' in size <12> not available
-(Font)              Font shape `T1/fvm/m/sl' tried instead on input line 224.
-LaTeX Font Info:    Font shape `T1/fvm/m/sl' will be
-(Font)              scaled to size 10.20007pt on input line 224.
-
-Overfull \hbox (2.66432pt too wide) in paragraph at lines 224--224
-|\T1/pplj/m/it/12 Common and files in \T1/fvm/m/sl/12 OpenGLStage_KM \T1/pplj/m
-/it/12 and \T1/fvm/m/sl/12 OpenGLStage2_KM| 
- []
-
-LaTeX Font Info:    Font shape `T1/fvm/m/it' in size <10.95> not available
-(Font)              Font shape `T1/fvm/m/sl' tried instead on input line 226.
-LaTeX Font Info:    Font shape `T1/fvm/m/sl' will be
-(Font)              scaled to size 9.30756pt on input line 226.
-
-Overfull \hbox (16.44543pt too wide) in paragraph at lines 232--233
-[]\T1/pplj/m/n/10 Here is the ex-ist-ing code in \T1/pplj/m/it/10 OpenGLStage_K
-M \T1/pplj/m/n/10 and \T1/pplj/m/it/10 OpenGLStage2_KM 
- []
-
-[3]
-
-LaTeX Warning: Marginpar on page 4 moved.
-
-
-LaTeX Warning: Marginpar on page 4 moved.
-
-
-LaTeX Warning: Marginpar on page 4 moved.
-
-
-LaTeX Warning: Marginpar on page 4 moved.
-
-
-Overfull \hbox (60.18571pt too wide) in paragraph at lines 254--255
-\T1/pplj/m/n/10 These files are the ap-pli-ca-tions` \T1/pplj/m/it/10 in-for-ma
--tion prop-erty list \T1/pplj/m/n/10 file (\T1/fvm/m/n/10 Info.plist\T1/pplj/m/
-n/10 )(Figures []1[] 
- []
-
-<images/info-plist1.pdf, id=123, 585.18625pt x 214.8025pt>
-File: images/info-plist1.pdf Graphic file (type pdf)
-
-<use images/info-plist1.pdf>
-Package pdftex.def Info: images/info-plist1.pdf used on input line 260.
-(pdftex.def)             Requested size: 304.45932pt x 111.75693pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 260--264
-
- []
-
-<images/info-plist2.pdf, id=124, 772.8875pt x 296.10625pt>
-File: images/info-plist2.pdf Graphic file (type pdf)
-
-<use images/info-plist2.pdf>
-Package pdftex.def Info: images/info-plist2.pdf used on input line 270.
-(pdftex.def)             Requested size: 468.33546pt x 179.42722pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 270--274
-
- []
-
-[4 <./images/info-plist1.pdf>]
-
-LaTeX Warning: Marginpar on page 5 moved.
-
-
-LaTeX Warning: Marginpar on page 5 moved.
-
-
-LaTeX Warning: Marginpar on page 5 moved.
-
-
-LaTeX Warning: Marginpar on page 5 moved.
-
-
-LaTeX Warning: Marginpar on page 5 moved.
-
-[5 <./images/info-plist2.pdf>]
-
-LaTeX Warning: Marginpar on page 6 moved.
-
-
-LaTeX Warning: Marginpar on page 6 moved.
-
-
-Underfull \hbox (badness 1694) in paragraph at lines 389--389
-\T1/fvm/m/n/8 OpenGLStage2_KM > 
- []
-
-
-LaTeX Warning: Marginpar on page 6 moved.
-
-[6]
-
-LaTeX Warning: Marginpar on page 7 moved.
-
-
-LaTeX Warning: Marginpar on page 7 moved.
-
-
-Overfull \hbox (25.36537pt too wide) in paragraph at lines 433--434
-\T1/pplj/m/n/10 sures cor-rect link-ing \T1/pplj/m/it/10 etc\T1/pplj/m/n/10 ). 
-Here is the orig-i-nal code from \T1/pplj/m/it/10 OpenGLStage_KM 
- []
-
-[7]
-
-LaTeX Warning: Marginpar on page 8 moved.
-
-
-LaTeX Warning: Marginpar on page 8 moved.
-
-[8]
-
-LaTeX Warning: Marginpar on page 9 moved.
-
-
-LaTeX Warning: Marginpar on page 9 moved.
-
-[9]
-
-LaTeX Warning: Marginpar on page 10 moved.
-
-
-LaTeX Warning: Marginpar on page 10 moved.
-
-[10]
-
-LaTeX Warning: Marginpar on page 11 moved.
-
-[11]
-
-LaTeX Warning: Marginpar on page 12 moved.
-
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 4.49997pt on input line 725.
-
-LaTeX Warning: Marginpar on page 12 moved.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 729--730
+Underfull \hbox (badness 10000) in paragraph at lines 248--249
  
  []
 
-
-LaTeX Warning: Marginpar on page 12 moved.
-
-<images/opponent.pdf, id=512, 285.065pt x 271.0125pt>
+[2] <images/opponent.pdf, id=77, 285.065pt x 271.0125pt>
 File: images/opponent.pdf Graphic file (type pdf)
 
 <use images/opponent.pdf>
-Package pdftex.def Info: images/opponent.pdf used on input line 741.
+Package pdftex.def Info: images/opponent.pdf used on input line 267.
 (pdftex.def)             Requested size: 152.21901pt x 144.71524pt.
-
-<images/Cone_Absorption_Curves.pdf, id=514, 465.74pt x 327.2225pt>
+ [3]
+<images/Cone_Absorption_Curves.pdf, id=86, 465.74pt x 327.2225pt>
 File: images/Cone_Absorption_Curves.pdf Graphic file (type pdf)
 
 <use images/Cone_Absorption_Curves.pdf>
-Package pdftex.def Info: images/Cone_Absorption_Curves.pdf used on input line 7
-47.
+Package pdftex.def Info: images/Cone_Absorption_Curves.pdf used on input line 2
+80.
 (pdftex.def)             Requested size: 139.72307pt x 98.1675pt.
+ [4 <./images/opponent.pdf> <./images/Cone_Absorption_Curves.pdf>]
+LaTeX Font Info:    Try loading font information for T1+ppl on input line 299.
 
-<images/Colour_Wheel.pdf, id=516, 522.95375pt x 396.48125pt>
-File: images/Colour_Wheel.pdf Graphic file (type pdf)
-
-<use images/Colour_Wheel.pdf>
-Package pdftex.def Info: images/Colour_Wheel.pdf used on input line 758.
-(pdftex.def)             Requested size: 156.88733pt x 118.94528pt.
-
-
-LaTeX Warning: Marginpar on page 12 moved.
-
-[12 <./images/opponent.pdf> <./images/Cone_Absorption_Curves.pdf> <./images/Col
-our_Wheel.pdf>]
-LaTeX Font Info:    Try loading font information for T1+ppl on input line 807.
- (/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/t1ppl.fd
+(/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/sc' will be
-(Font)              scaled to size 7.19995pt on input line 825.
-
-[13]
-
-LaTeX Warning: Marginpar on page 14 moved.
-
+(Font)              scaled to size 7.19995pt on input line 317.
 pdfTeX warning (ext4): destination with the same identifier (name{cite.Kuehni20
 05}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.883 ...w of colour is by Kuehni\cite{Kuehni2005}
+l.371 ...w of colour is by Kuehni\cite{Kuehni2005}
                                                   . Simons and Bean\cite{Sim...
 pdfTeX warning (ext4): destination with the same identifier (name{cite.SimonsBe
 an2001}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.883 ...05}. Simons and Bean\cite{SimonsBean2001}
+l.371 ...05}. Simons and Bean\cite{SimonsBean2001}
                                                    provide useful computatio...
 pdfTeX warning (ext4): destination with the same identifier (name{cite.GuoHouse
 r2004}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.883 ...en in Guo and Houser.\cite{GuoHouser2004}
+l.371 ...en in Guo and Houser.\cite{GuoHouser2004}
                                                   
 
-LaTeX Warning: Marginpar on page 14 moved.
+LaTeX Warning: Marginpar on page 5 moved.
 
 
-LaTeX Warning: Marginpar on page 14 moved.
+LaTeX Warning: Marginpar on page 5 moved.
 
 
-LaTeX Warning: Marginpar on page 14 moved.
+LaTeX Warning: Marginpar on page 5 moved.
 
 
-LaTeX Warning: Marginpar on page 14 moved.
+LaTeX Warning: Marginpar on page 5 moved.
 
 
-LaTeX Warning: Marginpar on page 14 moved.
+LaTeX Warning: Marginpar on page 5 moved.
 
-[14]
+[5]
+LaTeX Font Info:    Font shape `T1/fvm/m/it' in size <12> not available
+(Font)              Font shape `T1/fvm/m/sl' tried instead on input line 375.
+LaTeX Font Info:    Font shape `T1/fvm/m/sl' will be
+(Font)              scaled to size 10.20007pt on input line 375.
 Missing character: There is no D in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no a in font nullfont!
@@ -1653,207 +1463,93 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no 4 in font nullfont!
 Missing character: There is no 0 in font nullfont!
 
-Overfull \hbox (37.40028pt too wide) in paragraph at lines 958--960
+Overfull \hbox (37.40028pt too wide) in paragraph at lines 446--448
  [] 
  []
 
+[6]
+PGFPlots: reading {pgfplotstable.example1.dat}
 
-LaTeX Warning: Marginpar on page 15 moved.
+
+LaTeX Warning: Marginpar on page 7 moved.
 
 
-LaTeX Warning: Marginpar on page 15 moved.
+LaTeX Warning: Marginpar on page 7 moved.
 
-[15]
 
-LaTeX Warning: Marginpar on page 16 moved.
+LaTeX Warning: Marginpar on page 7 moved.
 
-pdfTeX warning (ext4): destination with the same identifier (name{cite.Kuehni20
-05}) has been already used, duplicate ignored
+[7] (./sample-km-master.bblpdfTeX warning (ext4): destination with the same ide
+ntifier (name{cite.Ihaka1996}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1012 ...Kuehni2005,SimonsBean2001,GuoHouser2004}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.SimonsBean2001}) has been already use
-d, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1012 ...Kuehni2005,SimonsBean2001,GuoHouser2004}
+l.8 \bibitem[Ihaka and Gentleman(1996)]{Ihaka1996}
                                                   pdfTeX warning (ext4): destin
 ation with the same identifier (name{cite.GuoHouser2004}) has been already used
 , duplicate ignored
 <to be read again> 
                    \relax 
-l.1012 ...Kuehni2005,SimonsBean2001,GuoHouser2004}
-                                                  
-
-LaTeX Warning: Marginpar on page 16 moved.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1016--1017
- 
- []
-
-
-LaTeX Warning: Marginpar on page 16 moved.
-
-File: images/opponent.pdf Graphic file (type pdf)
-<use images/opponent.pdf>
-Package pdftex.def Info: images/opponent.pdf used on input line 1028.
-(pdftex.def)             Requested size: 152.21901pt x 144.71524pt.
-File: images/Cone_Absorption_Curves.pdf Graphic file (type pdf)
- <use images/Cone_Absorption_Curves.pdf>
-Package pdftex.def Info: images/Cone_Absorption_Curves.pdf used on input line 1
-034.
-(pdftex.def)             Requested size: 139.72307pt x 98.1675pt.
- [16]
-File: images/Colour_Wheel.pdf Graphic file (type pdf)
-
-<use images/Colour_Wheel.pdf>
-Package pdftex.def Info: images/Colour_Wheel.pdf used on input line 1045.
-(pdftex.def)             Requested size: 156.88733pt x 118.94528pt.
- [17]
-
-LaTeX Warning: Marginpar on page 18 moved.
-
-pdfTeX warning (ext4): destination with the same identifier (name{cite.Kuehni20
-05}) has been already used, duplicate ignored
+l.14 \bibitem[Tufte(1990)]{GuoHouser2004}
+                                         pdfTeX warning (ext4): destination wit
+h the same identifier (name{cite.Tufte2006}) has been already used, duplicate i
+gnored
 <to be read again> 
                    \relax 
-l.1170 ... of colour is by Kuehni\cite{Kuehni2005}
-                                                  . Simons and Bean\cite{Sim...
-pdfTeX warning (ext4): destination with the same identifier (name{cite.SimonsBe
-an2001}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1170 ...5}. Simons and Bean\cite{SimonsBean2001}
-                                                   provide useful computatio...
-pdfTeX warning (ext4): destination with the same identifier (name{cite.GuoHouse
-r2004}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1170 ...n in Guo and Houser.\cite{GuoHouser2004}
-                                                  
-
-LaTeX Warning: Marginpar on page 18 moved.
-
-
-LaTeX Warning: Marginpar on page 18 moved.
-
-
-LaTeX Warning: Marginpar on page 18 moved.
-
-
-LaTeX Warning: Marginpar on page 18 moved.
-
-
-LaTeX Warning: Marginpar on page 18 moved.
-
-[18]
-Missing character: There is no D in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no w in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no w in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-
-Overfull \hbox (37.40028pt too wide) in paragraph at lines 1245--1247
- [] 
- []
-
-
-LaTeX Warning: Marginpar on page 19 moved.
-
-
-LaTeX Warning: Marginpar on page 19 moved.
-
-[19] (./sample-km-master.bblpdfTeX warning (ext4): destination with the same id
-entifier (name{cite.GuoHouser2004}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.8 \bibitem[Tufte(1990)]{GuoHouser2004}
-                                        pdfTeX warning (ext4): destination with
- the same identifier (name{cite.Tufte2006}) has been already used, duplicate ig
-nored
-<to be read again> 
-                   \relax 
-l.14 \bibitem[Tufte(1997)]{Tufte2006}
+l.20 \bibitem[Tufte(1997)]{Tufte2006}
                                      pdfTeX warning (ext4): destination with th
 e same identifier (name{cite.SimonsBean2001}) has been already used, duplicate 
 ignored
 <to be read again> 
                    \relax 
-l.20 \bibitem[Tufte(2001)]{SimonsBean2001}
+l.26 \bibitem[Tufte(2001)]{SimonsBean2001}
                                           pdfTeX warning (ext4): destination wi
 th the same identifier (name{cite.Kuehni2005}) has been already used, duplicate
  ignored
 <to be read again> 
                    \relax 
-l.26 \bibitem[Tufte(2006)]{Kuehni2005}
-                                      )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1260.
- [20]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1260.
+l.32 \bibitem[Tufte(2006)]{Kuehni2005}
+                                      pdfTeX warning (ext4): destination with t
+he same identifier (name{cite.pkg-geometry}) has been already used, duplicate i
+gnored
+<to be read again> 
+                   \relax 
+l.38 \bibitem[Umeki(2008)]{pkg-geometry}
+                                        )
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 484.
+ [8]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 484.
  (./sample-km-master.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1260.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1260.
-
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 484.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 484.
 Package rerunfilecheck Info: File `sample-km-master.out' has not changed.
-(rerunfilecheck)             Checksum: 72C3C3E6B4185D68F40F2E9AA494991C;3277.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1260.
+(rerunfilecheck)             Checksum: 549565B03F18E74858F264209080C6B3;500.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 484.
  ) 
 Here is how much of TeX's memory you used:
- 31986 strings out of 493488
- 650126 string characters out of 3141327
- 2479661 words of memory out of 3000000
- 34167 multiletter control sequences out of 15000+200000
- 113480 words of font info for 141 fonts, out of 3000000 for 9000
+ 31458 strings out of 493488
+ 642779 string characters out of 3141327
+ 2334968 words of memory out of 3000000
+ 34035 multiletter control sequences out of 15000+200000
+ 103344 words of font info for 130 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,13n,97p,3153b,1808s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,13n,97p,3153b,1775s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
-xlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
-ive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
-ve/2012/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2012/
-texmf-dist/fonts/type1/public/fpl/fplrij8a.pfb></usr/local/texlive/2012/texmf-d
-ist/fonts/type1/public/bera/fvmr8a.pfb></usr/local/texlive/2012/texmf-dist/font
-s/type1/public/bera/fvmro8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1
-/public/amsfonts/latxfont/lcircle1.pfb></usr/local/texlive/2012/texmf-dist/font
-s/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/
-urw/helvetic/uhvb8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/hel
-vetic/uhvr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/helvetic/u
-hvro8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/palatino/uplb8a.
-pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></u
-sr/local/texlive/2012/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on sample-km-master.pdf (20 pages, 530351 bytes).
+exlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/tex
+live/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
+ive/2012/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2012
+/texmf-dist/fonts/type1/public/fpl/fplrij8a.pfb></usr/local/texlive/2012/texmf-
+dist/fonts/type1/public/bera/fvmr8a.pfb></usr/local/texlive/2012/texmf-dist/fon
+ts/type1/public/bera/fvmro8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type
+1/public/amsfonts/latxfont/lcircle1.pfb></usr/local/texlive/2012/texmf-dist/fon
+ts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1
+/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/he
+lvetic/uhvr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/helvetic/
+uhvro8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/palatino/uplr8a
+.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on sample-km-master.pdf (8 pages, 223013 bytes).
 PDF statistics:
- 806 PDF objects out of 1000 (max. 8388607)
- 741 compressed objects within 8 object streams
- 432 named destinations out of 1000 (max. 500000)
- 4262 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 209 PDF objects out of 1000 (max. 8388607)
+ 176 compressed objects within 2 object streams
+ 49 named destinations out of 1000 (max. 500000)
+ 3127 words of extra memory for PDF output out of 10000 (max. 10000000)
 

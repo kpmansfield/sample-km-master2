@@ -1,4 +1,4 @@
 \contentsline {todo}{\color@box {}{yellow}{\leavevmode {\color {yellow}o}}\ A very long todonote that certainly will fill more than a single line in the list of todos. Just to make sure let's add some more text \ldots }{1}{section*.1}
-\contentsline {todo}{\color@box {}{yellow}{\leavevmode {\color {yellow}o}}\ \emph {Next} \ldots continue from here}{2}{section*.6}
-\contentsline {todo}{Figure: A figure I have to make \ldots }{12}{subsection*.28}
-\contentsline {todo}{Figure: A figure I have to make \ldots }{16}{subsection*.34}
+\contentsline {todo}{\color@box {}{yellow}{\leavevmode {\color {yellow}o}}\ \emph {Next} \ldots a margin todo note.}{2}{section*.9}
+\contentsline {todo}{Figure: A figure I have to make \ldots }{2}{table.1}
+\contentsline {todo}{\color@box {}{yellow}{\leavevmode {\color {yellow}o}}\ \emph {Next} \ldots still missing \emph {knitr} capabilities.}{7}{section*.17}
